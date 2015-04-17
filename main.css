@@ -4,20 +4,24 @@ html, body
 	padding: 0;
 }
 
-#bg {
-  position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%;
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 2000px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
+
+@media screen and (max-width: 2000px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -1000px;   /* 50% */
+  }
 }
