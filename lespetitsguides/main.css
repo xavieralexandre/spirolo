@@ -22,7 +22,5 @@ html, body
 	border: solid;
 	border-width: 4px;
 	padding:.5em;
-	box-shadow: 1px 1px 2px black;
-	text-shadow: 1px 1px 2px black;
 	background-color: rgba(100,100,100,0.5);
 }
