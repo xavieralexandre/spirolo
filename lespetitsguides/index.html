@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Les petits guides d'Ernest</title>
+  </head>
+  <body>
+    <script src="http://api3.geo.admin.ch/loader.js?lang=en" type="text/javascript"></script>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var layer = ga.layer.create('ch.swisstopo.pixelkarte-farbe');
+      var map = new ga.Map({
+        target: 'map',
+        layers: [layer],
+        view: new ol.View({
+          resolution: 10,
+          center: [536940.08, 150000]
+        })
+      });
+    </script>
+  </body>
+</html>
