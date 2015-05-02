@@ -18,13 +18,17 @@
 		})
 	});
 	  
-	// Create the KML Layer
-	var vector = new ol.layer.Vector({
-		source: new ol.source.KML({
-			projection: 'EPSG:21781',
-			url: 'http://xavieralexandre.org/spirolo/balades/cully.kml'
-		})
-	});
+      	  // Create the KML Layer
+	  var vector = new ol.layer.Vector({
+	    source: new ol.source.KML({
+	      projection: 'EPSG:21781',
+	      url: 'http://xavieralexandre.org/spirolo/balades/cully.kml',
+      extractStyles: false
+	    }),
+	    style: new ol.style.Style({
+	      stroke: new ol.style.Stroke({color: 'red', width: 10})
+            })
+});
 	map.addLayer(vector);
 	  
 	  
