@@ -1,12 +1,27 @@
 <!doctype html>
 <html lang="fr">
 <head>
-	<title>Les petits guides d'Ernest</title>
+	<title>Les balades d'Ernest</title>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<iframe src='https://map.geo.admin.ch/embed.html?X=148000.98&Y=546000.68&zoom=6&lang=fr&topic=ech&bgLayer=ch.swisstopo.pixelkarte-farbe,&layers=KML%7C%7Chttp://xavieralexandre.org/spirolo/lespetitsguides/cully.kml,KML%7C%7Chttp://xavieralexandre.org/spirolo/lespetitsguides/trace2.kml' width='100%' height='100%' frameborder='0' style='border:0'></iframe>
-	
-	<div id="tra"><div id="hero">Les Petits Guides d'Ernest</div></div>
+    <script src="http://api3.geo.admin.ch/loader.js?lang=en" type="text/javascript"></script>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var layer = ga.layer.create('ch.swisstopo.pixelkarte-farbe');
+      var map = new ga.Map({
+        target: 'map',
+        layers: [layer],
+        view: new ol.View({
+          resolution: 10,
+          center: [536940.08, 150000]
+        })
+      });
+    </script>
+	  
+    <div id="map" class="map"></div>
+	<div id="tra"><div id="hero">Les balades d'Ernest</div></div>
 </body>
 </html>
+
+
