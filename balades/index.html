@@ -17,6 +17,15 @@
           center: [536940.08, 150000]
         })
       });
+	  
+	  // Create the KML Layer
+	  var vector = new ol.layer.Vector({
+	    source: new ol.source.KML({
+	      projection: 'EPSG:21781',
+	      url: 'cully.kml'
+	    })
+	  });
+	  
     </script>
 	  
     <div id="map" class="map"></div>
