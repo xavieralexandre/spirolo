@@ -31,6 +31,18 @@
 });
 	map.addLayer(vector);
 	  
+      	  // Create the KML Layer
+	  var vector = new ol.layer.Vector({
+	    source: new ol.source.KML({
+	      projection: 'EPSG:21781',
+	      url: 'http://xavieralexandre.org/spirolo/balades/trace.kml',
+      extractStyles: false
+	    }),
+	    style: new ol.style.Style({
+	      stroke: new ol.style.Stroke({color: 'rgba(255,0,0,0.8)', width: 10})
+            })
+});
+	map.addLayer(vector);
 	  
 	</script>
 	  
